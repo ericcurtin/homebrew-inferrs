@@ -6,18 +6,18 @@ class Inferrs < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "#{BASE}/inferrs-aarch64-apple-darwin.tar.gz"
-      sha256 "#{SHA_MACOS}"
+      url "https://github.com/ericcurtin/inferrs/releases/download/latest/inferrs-aarch64-apple-darwin.tar.gz"
+      sha256 "25325b0bfb6c13a0c6c5129ee4a12d70d07bc12e0d4f3427dbac4816b3dbdc04"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "#{BASE}/inferrs-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "#{SHA_LINUX_X86}"
+      url "https://github.com/ericcurtin/inferrs/releases/download/latest/inferrs-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "768c0551c0e9d771ee329f7b74981fad73a238b834ddf6c337a9e056cea1c782"
     elsif Hardware::CPU.arm?
-      url "#{BASE}/inferrs-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "#{SHA_LINUX_ARM}"
+      url "https://github.com/ericcurtin/inferrs/releases/download/latest/inferrs-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "b42c9f7de3a8da0ff2a18675a60b5a8105cc36fe15621fb52f0c540cc1fd65f3"
     end
   end
 
