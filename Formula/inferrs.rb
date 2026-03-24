@@ -1,7 +1,7 @@
 class Inferrs < Formula
   desc "A conservative-memory inference engine for LLMs"
   homepage "https://github.com/ericcurtin/inferrs"
-  version "e1deaf6a7a6323327a4957e119ce458841b90414"
+  version "1b7b507b26d1538eded66eb1925ea6898ae57ca0"
   license "Apache-2.0"
 
   on_macos do
