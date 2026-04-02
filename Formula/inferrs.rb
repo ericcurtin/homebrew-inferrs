@@ -1,23 +1,23 @@
 class Inferrs < Formula
   desc "A conservative-memory inference engine for LLMs"
   homepage "https://github.com/ericcurtin/inferrs"
-  version "5f4de1954ac40c0f21aa4c3d1e9d9a1d991dcf25"
+  version "8b9ccfa78740f9b715801a411bb1ede0374c790b"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/ericcurtin/inferrs/releases/download/latest/inferrs-aarch64-apple-darwin.tar.gz"
-      sha256 "ef7aec5b877cc7fbadb75f7732c85c34ef9a932496e33efa036a532f5de07a53"
+      sha256 "b73cb76f450b3a69b35a2dad2526b171629ae7bcec14b6c313b2590ed7bfe50b"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/ericcurtin/inferrs/releases/download/latest/inferrs-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "2ee11a1282977b9d9e0d4cc1cb537b5b6d79c5e4cc83a8fab8bbe8ff4a63e8e3"
+      sha256 "c030975ea275771a18fb528f3ec777c7e466c46a9582ac2fb88da797a7219e48"
     elsif Hardware::CPU.arm?
       url "https://github.com/ericcurtin/inferrs/releases/download/latest/inferrs-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "e5125a9a67d0172635e1218269052ad1aaef2f55b746a6a995aba10d966503f8"
+      sha256 "b5f5a72c2eb7a495fcc4188f74080baa9f85df80b033b0b14de9c7329ad004ff"
     end
   end
 
@@ -33,7 +33,7 @@ class Inferrs < Formula
       libinferrs_backend_rocm.so
       libinferrs_backend_vulkan.so
     ].each do |plugin|
-      (lib / "inferrs" / plugin).install plugin if File.exist?(plugin)
+      (lib / "inferrs").install plugin if File.exist?(plugin)
     end
   end
 
