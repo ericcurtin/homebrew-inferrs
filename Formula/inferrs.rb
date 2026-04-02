@@ -32,8 +32,8 @@ class Inferrs < Formula
       libinferrs_backend_cuda.so
       libinferrs_backend_rocm.so
       libinferrs_backend_vulkan.so
-    ].each do |lib|
-      (lib_path / "inferrs" / lib).install lib if File.exist?(lib)
+    ].each do |plugin|
+      (lib / "inferrs" / plugin).install plugin if File.exist?(plugin)
     end
   end
 
@@ -43,7 +43,7 @@ class Inferrs < Formula
     # On Linux, also link into the standard search path.
     return unless OS.linux?
 
-    plugin_dir = lib_path / "inferrs"
+    plugin_dir = lib / "inferrs"
     bin_dir    = bin.realpath
     plugin_dir.children.select { |f| f.extname == ".so" }.each do |so|
       (bin_dir / so.basename).make_symlink(so) unless (bin_dir / so.basename).exist?
