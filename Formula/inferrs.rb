@@ -1,23 +1,23 @@
 class Inferrs < Formula
   desc "A conservative-memory inference engine for LLMs"
   homepage "https://github.com/ericcurtin/inferrs"
-  version "0.0.20260414132532"
+  version "0.0.20260414141416"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/ericcurtin/inferrs/releases/download/0.0.20260414132532/inferrs-aarch64-apple-darwin.tar.gz"
-      sha256 "d0d72c00cb03f95fec68c785a2d8a2b102468ffcf3868ef5ea7334d297d12ab2"
+      url "https://github.com/ericcurtin/inferrs/releases/download/0.0.20260414141416/inferrs-aarch64-apple-darwin.tar.gz"
+      sha256 "048df161072762af025f257ef9bfd9dca686959d8de90106a7c126d0ffe5cae0"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/ericcurtin/inferrs/releases/download/0.0.20260414132532/inferrs-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "0df89960546bc8ccb6baad42f13e713be9c6c6fe9b49c04c568669507c574b2d"
+      url "https://github.com/ericcurtin/inferrs/releases/download/0.0.20260414141416/inferrs-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "6bb3701d783f3065ccc26e3f4118e0cdde15b35ffe4b1c7d0322bf22a56fbffe"
     elsif Hardware::CPU.arm?
-      url "https://github.com/ericcurtin/inferrs/releases/download/0.0.20260414132532/inferrs-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "7640fc0443d2c541f31d794d2d7fd30163e629dc2323f4d5dd231dcf79e0d2d5"
+      url "https://github.com/ericcurtin/inferrs/releases/download/0.0.20260414141416/inferrs-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "766baf4314de5ac62df56ac7d19e8913f68545dbfd6d4383e9e9e0cf6e784654"
     end
   end
 
